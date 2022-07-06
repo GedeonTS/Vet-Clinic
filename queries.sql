@@ -16,3 +16,24 @@ SELECT * FROM animals WHERE date_of_birth>'2016-01-01' AND date_of_birth<'2019-0
 
  SELECT * FROM animals WHERE weight_kg>=10.4 AND weight_kg<=17.3;
 
+
+ DELETE FROM animals WHERE date_of_birth>'2022-01-01';
+
+UPDATE animals SET weight_kg=(weight_kg*(-1));
+
+UPDATE animals SET weight_kg=(weight_kg*(-1)) WHERE weight_kg<0;
+
+SELECT COUNT(*) FROM animals;
+
+SELECT COUNT(*) FROM animals WHERE escape_attempts=0;
+
+SELECT AVG(weight_kg) FROM animals;
+
+SELECT name FROM animals WHERE escape_Attempts=(SELECT MAX(escape_attempts) FROM animals);
+
+SELECT MIN(weight_kg),MAX(weight_kg) FROM animals WHERE species='digimon';
+SELECT MIN(weight_kg),MAX(weight_kg) FROM animals WHERE species='pokemon';
+
+SELECT AVG(escape_attempts) from animals WHERE species='digimon' AND (date_of_birth > '1990-01-01' AND date_of_birth < '2000-01-01');
+SELECT AVG(escape_attempts)from animals WHERE species='pokemon' AND ('1990-01-01'<date_of_birth AND date_of_birth<'2000-01-01');
+
