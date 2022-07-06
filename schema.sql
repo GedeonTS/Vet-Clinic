@@ -9,4 +9,6 @@ CREATE TABLE animals (
     weight_kg dec
 );
 
+ALTER TABLE animals ADD species varchar(100);
+
 
