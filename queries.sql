@@ -34,6 +34,6 @@ SELECT name FROM animals WHERE escape_Attempts=(SELECT MAX(escape_attempts) FROM
 SELECT MIN(weight_kg),MAX(weight_kg) FROM animals WHERE species='digimon';
 SELECT MIN(weight_kg),MAX(weight_kg) FROM animals WHERE species='pokemon';
 
-SELECT AVG(escape_attempts)from animals WHERE species='digimon';
-SELECT AVG(escape_attempts)from animals WHERE species='pokemon';
+SELECT AVG(escape_attempts) from animals WHERE species='digimon' AND (date_of_birth > '1990-01-01' AND date_of_birth < '2000-01-01');
+SELECT AVG(escape_attempts)from animals WHERE species='pokemon' AND ('1990-01-01'<date_of_birth AND date_of_birth<'2000-01-01');
 
