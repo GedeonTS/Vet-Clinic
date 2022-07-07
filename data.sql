@@ -24,5 +24,11 @@ UPDATE animals SET owner_id=3 WHERE name='Devimon' OR name='Plantmon';
 UPDATE animals SET owner_id=4 WHERE name='Charmander' OR name='Squirtle' OR name='Blossom';
 UPDATE animals SET owner_id=5 WHERE name='Angemon' OR name='Boarmon';
 
+UPDATE animals SET species_id=2 WHERE name ilike '%mon%';
+UPDATE animals SET species_id=1 WHERE species_id is null;
+
+
+
+
 
 
