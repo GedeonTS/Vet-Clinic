@@ -28,6 +28,39 @@ UPDATE animals SET species_id=2 WHERE name ilike '%mon%';
 UPDATE animals SET species_id=1 WHERE species_id is null;
 
 
+INSERT INTO vets(name,age,date_of_graduation)
+ VALUES('William Tatcher',45,'04/23/2000'),
+ ('Maisy Smith',26,'01/17/2019'),
+ ('Stephanie Mendez',64,'05/04/1981'),
+ ('Jack Harkness',45,'06/08/2008')
+ ;
+
+ INSERT INTO specializations VALUES (1,1),(1,3),(2,3),(2,4);
+
+ INSERT INTO visits( animals_id, vets_id, date_of_visits) VALUES
+ (4,1,'05/24/2020'),
+ (4,3,'07/22/2020'),
+ (5,4,'02/02/2021'),
+ (11,2,'01/05/2020'),
+ (11,2,'03/08/2020'),
+ (11,2,'04/14/2020'),
+ (6,3,'05/04/2021'),
+ (7,4,'02/24/2021'),
+ (1,2,'12/21/2019'),
+ (1,1,'08/10/2020'),
+ (1,2,'04/07/2021'),
+ (8,3,'09/29/2019'),
+ (2,4,'10/03/2020'),
+ (2,4,'11/04/2020'),
+ (3,2,'01/24/2019'),
+ (3,2,'05/15/2019'),
+ (3,2,'02/27/2020'),
+ (3,2,'08/24/2020'),
+ (9,3,'05/24/2020'),
+ (9,1,'01/11/2021');
+
+
+
 
 
 
