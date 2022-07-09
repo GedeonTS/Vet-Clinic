@@ -68,4 +68,4 @@ SELECT animals.name,vets.name,date_of_visits FROM visits,animals,vets ORDER BY d
 
 
 
-SELECT vets.name,species.name FROM vets,species LEFT OUTER JOIN specializations ON vets_id=id GROUP BY species_id,species.name,vets.name;
+select vets.name,species.name from vets INNER JOIN specializations ON vets.id!=specializations.vets_id JOIN species ON species.id !=specializations.species_id where vets.name='Maisy Smith' LIMIT 1;
