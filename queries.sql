@@ -50,3 +50,22 @@ SELECT * FROM animals JOIN owners ON owner_id=owners.id where owners.id=5 AND es
 
 SELECT owner_id,owners.full_name FROM animals JOIN owners ON owners.id = owner_id GROUP BY owner_id,owners.full_name ORDER BY count(*) DESC LIMIT 1;
 
+
+
+SELECT animals.name FROM visits JOIN animals ON animals_id=animals.id WHERE vets_id=1 ORDER BY date_of_visits DESC LIMIT 1;
+
+SELECT * FROM visits WHERE vets_id=3;
+
+SELECT * from vets LEFT OUTER JOIN specializations ON vets_id=id;
+
+SELECT animals.name FROM animals JOIN visits ON animals.id=visits.animals_id WHERE vets_id=3 AND date_of_visits>'2020-04-01' AND date_of_visits<'2020-08-30';
+
+SELECT animals.name FROM visits join animals ON animals.id =animals_id GROUP BY animals_id,animals.name ORDER BY COUNT(*) DESC LIMIT 1;
+
+SELECT animals.name FROM visits JOIN animals ON animals.id=visits.animals_id WHERE visits.vets_id=2 ORDER BY date_of_visits LIMIT 1;
+
+SELECT animals.name,vets.name,date_of_visits FROM visits,animals,vets ORDER BY date_of_visits LIMIT 1;
+
+
+
+select vets.name,species.name from vets INNER JOIN specializations ON vets.id!=specializations.vets_id JOIN species ON species.id !=specializations.species_id where vets.name='Maisy Smith' LIMIT 1;
