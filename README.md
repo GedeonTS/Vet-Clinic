@@ -1,7 +1,6 @@
 # curriculum-databases-projects-template
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+In this project, I used a relational database to create the initial data structure for a vet clinic. I created a table to store animals' information, insert some data into it, queried and updated animals table using transactions as well as using GROUP BY syntax when querying aggregate data using SQL aggregate functions like AVG, MAX, MIN, COUNT e.t.c. I Used primary key & foreign key mechanism for joining tables, Queried multiple tables and prepared complex queries that answered analytical questions. Additionally I implemented many-to-many relation between relations.
 
 
 ## Getting Started
