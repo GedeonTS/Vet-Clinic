@@ -65,6 +65,5 @@ SELECT animals.name FROM visits join animals ON animals.id =animals_id GROUP BY 
 SELECT animals.name FROM visits JOIN animals ON animals.id=visits.animals_id WHERE visits.vets_id=2 ORDER BY date_of_visits LIMIT 1;
 
 SELECT animals.name,vets.name,date_of_visits FROM visits,animals,vets ORDER BY date_of_visits LIMIT 1;
-select vets.name,COUNT(visits.vets_id) as visit,COUNT(species.name) as specialization from vets LEFT JOIN specializations ON vets.id=specializations.vets_id LEFT JOIN species ON species.id=specializations.species_id INNER JOIN visits ON visits.vets_id =vets.id GROUP BY vets.name ORDER BY visit DESC LIMIT 1;
-
-select vets.name,species.name from vets INNER JOIN specializations ON vets.id!=specializations.vets_id JOIN species ON species.id !=specializations.species_id where vets.name='Maisy Smith' LIMIT 1;
+SELECT vets.name,COUNT(visits.vets_id) AS visit,COUNT(species.name) AS specialization FROM vets LEFT JOIN specializations ON vets.id=specializations.vets_id LEFT JOIN species ON species.id=specializations.species_id INNER JOIN visits ON visits.vets_id =vets.id GROUP BY vets.name ORDER BY visit DESC LIMIT 1;
+SELECT vets.name,species.name from vets INNER JOIN specializations ON vets.id!=specializations.vets_id JOIN species ON species.id !=specializations.species_id where vets.name='Maisy Smith' LIMIT 1;
